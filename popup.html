@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dot Lang Viewer</title>
+    <style type="text/css">
+    body {
+      margin: 0px;
+      font-size: 14px;
+    }
+    div.container {
+      width: 240px;
+      margin: 5px;
+    }
+    input#reload_interval {
+      margin: 4px;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <label for="disable-render-dot-lang">Disable render Dot lang</label>
+      <input type="checkbox" name="disable-render-dot-lang" id="disable_render" />
+
+      <hr />
+
+      <label for="enable-auto-reload">Enable auto reload</label>
+      <input type="checkbox" name="enable-auto-reload" id="reload_enable" checked/>
+  
+      <hr />
+  
+      <label for="auto-reload-interval">Auto reload interval:</label>
+      <select name="auto-reload-interval" id="reload_interval" >
+        <option value='1000'>1 Second</option>
+        <option value='5000'>5 Second</option>
+        <option value='15000'>15 Second</option>
+        <option value='30000'>30 Second</option>
+        <option value='60000'>60 Second</option>
+      </select>
+
+      <hr />
+
+      <a href="usage.html" target="_blank">Usage</a>
+    </div>
+
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/popup.js"></script>
+  </body>
+</html>

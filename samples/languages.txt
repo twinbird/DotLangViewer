@@ -1,0 +1,30 @@
+/*
+ * Programming languages digram
+ * Reference
+ *   http://rigaux.org/language-study/diagram-light.png
+ */
+
+digraph programming_languages {
+  Lisp -> Scheme -> "Scheme R5RS";
+  Lisp -> "Common Lisp";
+  Scheme -> "Common Lisp";
+  "Fortran I" -> "Fortran 77" -> "Fortran 90";
+  "Fortran I" -> Algol60;
+  Algol60 -> Scheme;
+  COBOL -> "PL/I";
+  Algol60 -> "PL/I";
+  "Fortran I" -> "PL/I";
+  "PL/I" -> Pascal -> "Ada 83" -> Eiffel -> Ruby;
+  Algol60 -> Smalltalk -> "Smalltalk 80" -> Ruby;
+  Algol60 -> Td;
+  Algol60 -> Perl -> Perl5;
+  Perl -> Ruby;
+  Algol60 -> "C(K&R)" -> "C++" -> Java -> "Java2(v1.5beta)";
+  Java -> JavaScript;
+  Algol60 -> "C++" -> "C++(ISO)" -> "C#" -> "C# 2.0";
+  "C++" -> Python -> "Python 2.0";
+  Python -> Ruby;
+  ML -> "Haskell 98";
+  ML -> SML -> Caml -> OCaml;
+  Prolog;
+}

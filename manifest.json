@@ -1,0 +1,31 @@
+{
+  "manifest_version" : 2,
+  "name" : "Dot Lang Viewer",
+  "description" : "Converts and previews 'dot lang' files to PNG image inside Chrome.",
+  "version" : "0.2",
+  "icons" : {
+    "16" : "icon/16icon.png",
+    "48" : "icon/48icon.png",
+    "128" : "icon/128icon.png"
+  },
+  "browser_action" : {
+    "default_icon" : "icon/badge.png",
+    "default_title" : "Dot Lang Viewer",
+    "default_popup" : "popup.html"
+  },
+  "content_scripts" : [
+    {
+      "matches" : [
+        "file://*/*",
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js" : [
+        "js/viz.js", 
+        "js/jquery-2.1.4.min.js",
+        "js/content_scripts.js"
+      ]
+    }
+  ],
+  "permissions" : ["tabs", "<all_urls>", "storage"]
+}
