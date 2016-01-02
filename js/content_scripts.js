@@ -6,8 +6,17 @@ var render_dot_graph = function(dot_code) {
   // strip html tags in dot code.
   // because of chrome append html tags.
   dot_code = dot_code.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'');
+
   // drawing graph
-  var png = Viz(dot_code, {format: "png-image-element", engine:"dot"});
+  try {
+    var png = Viz(dot_code, {format: "png-image-element", engine:"dot"});
+  } catch (e) {
+    if (e.match(/syntax error/)) {
+      $(document.body).empty();
+      $(document.body).append(e);
+    }
+    return;
+  }
   var img_area = $('<center></center>').append(png);
   $(document.body).empty();
   $(document.body).append(img_area);
