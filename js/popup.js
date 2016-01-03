@@ -3,7 +3,7 @@ $(function() {
     if (!chrome.runtime.error) {
       var disable_render = items.disable_render;
       if (disable_render === undefined) {
-        disable_render = true;
+        disable_render = false;
       }
       $('#disable_render').prop('checked', disable_render);
     }
@@ -23,7 +23,7 @@ $(function() {
     if (!chrome.runtime.error) {
       var reload_interval = items.reload_interval;
       if (reload_interval === undefined) {
-        reload_interval = 1;
+        reload_interval = 1000;
       }
       $('#reload_interval').val(reload_interval);
     }

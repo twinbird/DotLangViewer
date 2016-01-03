@@ -1,8 +1,8 @@
 {
   "manifest_version" : 2,
   "name" : "Dot Lang Viewer",
-  "description" : "Converts and previews 'dot lang' files to PNG image inside Chrome.",
-  "version" : "0.3",
+  "description" : "Converts and previews 'dot lang' files to PNG image Graph inside Chrome.",
+  "version" : "0.3.1",
   "icons" : {
     "16" : "icon/16icon.png",
     "48" : "icon/48icon.png",
