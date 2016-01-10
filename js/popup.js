@@ -52,4 +52,27 @@ $(function() {
       }
     });
   });
+
+  var download_dot_graph = function(dot_code) {
+    dot_code = dot_code.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'');
+    var svg = Viz(dot_code);
+    var dl_blob = new Blob([svg], {"type" : "image/svg+xml"});
+    var dl_url = URL.createObjectURL(dl_blob);
+    chrome.downloads.download({
+      url: dl_url,
+      filename: 'export.svg'
+    });
+  };
+
+  $('#download_svg').click(function() {
+    chrome.tabs.getSelected(null, function(tab) {
+      $.ajax({
+        url: tab.url,
+        cache: false,
+        success: function(txt) {
+          download_dot_graph(txt);
+        }
+      });
+    });
+  });
 });
