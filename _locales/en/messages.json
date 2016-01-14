@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Dot Lang Viewer",
+    "description" : "Converts and previews 'dot lang' files to PNG image Graph inside Chrome."
+  },
+  "appDesc": {
+    "message": "Converts and previews 'dot lang' files to PNG image Graph inside Chrome.",
+    "description": "Converts and previews 'dot lang' files to PNG image Graph inside Chrome."
+  }
+}

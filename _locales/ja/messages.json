@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Dot Lang Viewer",
+    "description" : "Dot言語で書かれたファイルをドラッグ&ドロップするとChrome内でグラフ図(PNG)に変換して表示します。SVG形式へのエクスポートも可能です。"
+  },
+  "appDesc": {
+    "message": "Dot言語で書かれたファイルをドラッグ&ドロップするとChrome内でグラフ図(PNG)に変換して表示します。SVG形式へのエクスポートも可能です。",
+    "description": "Dot言語で書かれたファイルをドラッグ&ドロップするとChrome内でグラフ図(PNG)に変換して表示します。SVG形式へのエクスポートも可能です。※注意：chromeの設定->その他のツール->拡張機能->Dot Lang Viewerの中から「ファイルのURLへのアクセスを許可する」を有効にしてください。"
+  }
+}

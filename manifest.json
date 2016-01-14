@@ -1,8 +1,9 @@
 {
   "manifest_version" : 2,
-  "name" : "Dot Lang Viewer",
-  "description" : "Converts and previews 'dot lang' files to PNG image Graph inside Chrome.",
-  "version" : "0.4",
+  "name" : "__MSG_appName__",
+  "description" : "__MSG_appDesc__",
+  "default_locale": "en",
+  "version" : "0.5",
   "icons" : {
     "16" : "icon/16icon.png",
     "48" : "icon/48icon.png",
