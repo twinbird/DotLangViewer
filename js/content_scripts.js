@@ -6,6 +6,9 @@
     // strip html tags in dot code.
     // because of chrome append html tags.
     dot_code = dot_code.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'');
+
+    //for multi byte encoding
+    dot_code = dot_code + new Array(dot_code.length).join(" ");
   
     // drawing graph
     try {
