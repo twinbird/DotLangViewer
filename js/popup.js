@@ -4,6 +4,9 @@ $(function() {
       var disable_render = items.disable_render;
       if (disable_render === undefined) {
         disable_render = false;
+        chrome.storage.sync.set({"disable_render" : false}, function() {
+          console.log("disable_render initialize failed.");
+        });
       }
       $('#disable_render').prop('checked', disable_render);
     }
@@ -14,6 +17,9 @@ $(function() {
       var reload_enable = items.reload_enable;
       if (reload_enable === undefined) {
         reload_enable = true;
+        chrome.storage.sync.set({"reload_enable" : true}, function() {
+          console.log("reload_enable initialize failed.");
+        });
       }
       $('#reload_enable').prop('checked', reload_enable);
     }
@@ -24,6 +30,9 @@ $(function() {
       var reload_interval = items.reload_interval;
       if (reload_interval === undefined) {
         reload_interval = 1000;
+        chrome.storage.sync.set({"reload_interval" : 1000}, function() {
+          console.log("reload_interval initialize failed.");
+        });
       }
       $('#reload_interval').val(reload_interval);
     }

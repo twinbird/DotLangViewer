@@ -100,27 +100,8 @@
     });
     render_dot_from_url();
   };
-  
-  var initialize_storage = function() {
-    chrome.storage.sync.get("reload_enable", function(items) {
-      if ((!chrome.runtime.error) && items.reload_enable === undefined) {
-        chrome.storage.sync.set({"reload_enable" : true});
-      }
-    });
-    chrome.storage.sync.get("reload_interval", function(items) {
-      if ((!chrome.runtime.error) && items.reload_enable === undefined) {
-        chrome.storage.sync.set({"reload_interval" : DEFAULT_AUTO_RELOAD_INTERVAL});
-      }
-    });
-    chrome.storage.sync.get("disable_render", function(items) {
-      if ((!chrome.runtime.error) && items.reload_enable === undefined) {
-        chrome.storage.sync.set({"disable_render" : false});
-      }
-    });
-  };
-  
+ 
   $(function() {
-    initialize_storage();
     main_process_start();
   });
 })(document);
