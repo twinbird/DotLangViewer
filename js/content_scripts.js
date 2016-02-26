@@ -20,7 +20,7 @@
       }
       return;
     }
-    var img_area = $('<center></center>').append(png);
+    var img_area = $('<div align="left"></div>').append(png);
     $(document.body).empty();
     $(document.body).append(img_area);
   };
